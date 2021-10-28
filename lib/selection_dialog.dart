@@ -80,6 +80,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 ],
               ),
           child: Column(
+            textDirection: TextDirection.ltr,
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -104,6 +105,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
                     widget.favoriteElements.isEmpty
                         ? const DecoratedBox(decoration: BoxDecoration())
                         : Column(
+                            textDirection: TextDirection.ltr,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               ...widget.favoriteElements.map(
