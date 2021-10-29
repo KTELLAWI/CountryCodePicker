@@ -80,9 +80,9 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 ],
               ),
           child: Column(
-            textDirection: TextDirection.ltr,
             mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            textDirection: TextDirection.ltr,
             children: [
               IconButton(
                 padding: const EdgeInsets.all(0),
