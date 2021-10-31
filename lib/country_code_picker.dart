@@ -168,7 +168,6 @@ class CountryCodePickerState extends State<CountryCodePicker> {
         child: Padding(
           padding: widget.padding,
           child: Flex(
-            textDirection: TextDirection.ltr,
             direction: Axis.horizontal,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
