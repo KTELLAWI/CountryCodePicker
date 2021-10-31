@@ -170,6 +170,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
           child: Flex(
             direction: Axis.horizontal,
             mainAxisSize: MainAxisSize.min,
+            textDirection:TextDirection.ltr,
             children: <Widget>[
               if (widget.showFlagMain != null
                   ? widget.showFlagMain!
@@ -199,9 +200,11 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                     widget.showOnlyCountryWhenClosed
                         ? selectedItem!.toCountryStringOnly()
                         : selectedItem.toString(),
+                        textDirection:TextDirection.ltr
                     style:
                         widget.textStyle ?? Theme.of(context).textTheme.button,
                     overflow: widget.textOverflow,
+                    
                   ),
                 ),
               if (widget.showDropDownButton)

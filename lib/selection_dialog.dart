@@ -59,7 +59,9 @@ class _SelectionDialogState extends State<SelectionDialog> {
   late List<CountryCode> filteredElements;
 
   @override
-  Widget build(BuildContext context) => Padding(
+  Widget build(BuildContext context) => Directionality( // add this
+        textDirection: TextDirection.ltr, // set this property 
+        child: Padding(
         padding: const EdgeInsets.all(0.0),
         child: Container(
           clipBehavior: Clip.hardEdge,
@@ -134,7 +136,8 @@ class _SelectionDialogState extends State<SelectionDialog> {
             ],
           ),
         ),
-      );
+      ),
+    );
 
   Widget _buildOption(CountryCode e) {
     return Container(
