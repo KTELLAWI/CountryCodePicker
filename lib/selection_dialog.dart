@@ -80,9 +80,9 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 ],
               ),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
             textDirection: TextDirection.ltr,
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               IconButton(
                 padding: const EdgeInsets.all(0),
@@ -97,8 +97,6 @@ class _SelectionDialogState extends State<SelectionDialog> {
                     style: widget.searchStyle,
                     decoration: widget.searchDecoration,
                     onChanged: _filterElements,
-                    textAlign: TextAlign.left,
-
                   ),
                 ),
               Expanded(
@@ -107,8 +105,8 @@ class _SelectionDialogState extends State<SelectionDialog> {
                     widget.favoriteElements.isEmpty
                         ? const DecoratedBox(decoration: BoxDecoration())
                         : Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
                             textDirection: TextDirection.ltr,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               ...widget.favoriteElements.map(
                                 (f) => SimpleDialogOption(
@@ -144,7 +142,6 @@ class _SelectionDialogState extends State<SelectionDialog> {
     return Container(
       width: 400,
       child: Flex(
-        textDirection: TextDirection.ltr,
         direction: Axis.horizontal,
         children: <Widget>[
           if (widget.showFlag!)
